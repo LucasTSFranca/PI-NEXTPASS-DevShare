@@ -1,0 +1,172 @@
+body {
+     background: url("../resources/imgs/background.png") center top / cover fixed;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.navbar-aero{
+    background: rgba(0,140,255,0.5);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 80px;
+    margin: 15px;
+    box-shadow: 0 8px 30px rgba(0, 42, 104, 0.2);;
+}
+
+.logo-frutiger{
+    width: 150px;
+}
+
+.txt-fruitger{
+    position: relative;
+    top: -100px;
+    left: -50px;
+}
+
+.form-control{
+    background: rgba(1, 183, 255, 0.5);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(140, 241, 245, 0.719);
+    border-radius: 30px;
+    box-shadow: 0 8px 10px rgba(113, 210, 255, 0.767);;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:hover{
+    background-color: rgba(0, 121, 151, 0.377);
+     backdrop-filter: blur(15px);
+}
+
+.nav-link{
+    color: aliceblue;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover{
+    color: rgb(91, 246, 252);
+}
+
+.btn-sessão{
+    size: 150cap;
+}
+
+.btn-not{
+    background-color: rgba(0, 0, 129, 0.678);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(140, 241, 245, 0.719);
+    border-radius: 30px;
+    box-shadow: 0 8px 10px rgba(113, 210, 255, 0.767);;
+
+}
+
+.btn-log{
+    background-color: rgba(82, 248, 253, 0.678);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(140, 241, 245, 0.719);
+    border-radius: 30px;
+    box-shadow: 0 8px 10px rgba(113, 210, 255, 0.767);;
+}
+
+.icon-bell{
+    color: rgb(237, 253, 148);
+}
+
+.icon-log{
+    color: rgb(238, 243, 241);
+}
+
+.exp{
+    position: relative;
+    top: -150px;
+    left: 20px;
+    display: flex;
+
+}
+
+.btn-pst{
+    background-color: rgba(82, 248, 253, 0.678);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(140, 241, 245, 0.719);
+    border-radius: 80px;
+    box-shadow: 0 8px 10px rgba(113, 210, 255, 0.767);;
+    width: 270px;
+    height: 50px;
+    color:rgba(0, 0, 83, 0.74);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-exp{
+    background-color: rgba(31, 233, 98, 0.74);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(140, 241, 245, 0.719);
+    border-radius: 80px;
+    box-shadow: 0 8px 10px rgba(113, 210, 255, 0.767);;
+    width: 270px;
+    height: 50px;
+    color: rgba(0, 54, 202, 0.836);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-pst:hover{
+    background-color: rgba(245, 245, 220, 0);
+}
+
+.btn-exp:hover{
+    background-color: rgba(245, 245, 220, 0);
+}
+
+.explicar{
+    position: relative;
+    top: -150px;
+    background: rgba(0, 58, 184, 0.5);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    margin: 15px;
+    height: 200px;
+    width: 1300px;
+    box-shadow: 0 8px 30px rgba(0, 42, 104, 0.2);;
+    color:aliceblue;
+}
+
+@media (max-width: 767.98px){
+    .explicar{
+        top: -30px;
+    }
+}
+
+.card-text{
+    background: rgba(46, 187, 252, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(139, 247, 255, 0.5);
+    border-radius: 30px;
+    color:aliceblue;
+    box-shadow: 0 8px 30px rgba(103, 164, 255, 0.2);;
+}
+
+.bi-rocket-takeoff-fill{
+    color:rgba(59, 209, 255, 0.7);
+    filter: drop-shadow(0 0 8px rgba(59, 209, 255, 0.9));
+}
+
+.bi-chat-dots{
+    color:rgb(244, 140, 253, 0.7);
+    filter: drop-shadow(0 0 8px rgba(244, 140, 253, 0.9));
+}
+
+.bi-share{
+    color:rgba(0, 230, 123, 0.7);
+    filter: drop-shadow(0 0 8px rgba(0, 230, 123, 0.9));
+}
+
+.bi-star{
+    color:rgb(163, 255, 59, 0.7);
+    filter: drop-shadow(0 0 8px rgba(163, 255, 59, 0.9));
+}
+
+
+.rodapé{
+    height: 100px;
+    background: rgba(59, 59, 59, 0.445);
+    backdrop-filter: blur(15px);
+}
