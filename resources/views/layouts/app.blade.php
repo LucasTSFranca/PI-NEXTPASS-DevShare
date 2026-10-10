@@ -18,7 +18,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-aero">
       <div class="container-fluid px-3 px-lg-4">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('home')}}">
           <img src="{{ asset('images/logo.png') }}" class="logo-frutiger" alt="DevShare">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto align-items-lg-center justify-content-center mb-2 mb-lg-0 gap-lg-3">
             <li class="nav-item">
-              <a class="nav-link active-info" aria-current="page" href="#"><i class="bi bi-house me-2" aria-hidden="true"></i>Início</a>
+              <a class="nav-link active-info" aria-current="page" href="{{ route('home')}}"><i class="bi bi-house me-2" aria-hidden="true"></i>Início</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="bi bi-people-fill me-2"></i>Comunidade</a>
@@ -44,8 +44,8 @@
           </form>
 
           <div class="btn-sessao d-flex gap-2 ms-lg-3 mb-3 mb-lg-0">
-            <button type="button" class="btn-not btn-lg px-2"><i class="icon-bell bi bi-bell-fill fs-4"></i></button>
-            <button type="button" class="btn-log btn-lg px-2"><i class="icon-log bi bi-person-fill fs-4"></i></button>
+            <button type="button" class="btn-not btn-lg px-2 icon-bell bi bi-bell-fill fs-4"></button>
+            <button type="button" class="btn-log btn-lg px-2 icon-log bi bi-person-fill fs-6">Login</button>
           </div>
         </div> 
       </div>
