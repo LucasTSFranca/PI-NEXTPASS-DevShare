@@ -44,8 +44,8 @@
           </form>
 
           <div class="btn-sessao d-flex gap-2 ms-lg-3 mb-3 mb-lg-0">
-            <button type="button" class="btn-not btn-lg px-2 icon-bell bi bi-bell-fill fs-4"></button>
-            <button type="button" class="btn-log btn-lg px-2 icon-log bi bi-person-fill fs-6">Login</button>
+            <button type="button" class="btn-log btn-lg px-2 icon-log bi bi-person-plus-fill fs-5">Cadastrar</button>
+            <button type="button" class="btn btn-success btn-lg icon-log bi bi-person-fill fs-5">Login</button>
           </div>
         </div> 
       </div>
