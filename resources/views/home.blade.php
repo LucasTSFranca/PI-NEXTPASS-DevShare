@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevShare</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
+    <link href="" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     
 
@@ -19,7 +19,7 @@
     <nav class="navbar navbar-expand-lg navbar-aero">
   <div class="container-fluid px-3 px-lg-4">
     <a class="navbar-brand" href="#">
-      <img src="resources/imgs/logo.png" class="logo-frutiger" alt="DevShare">
+      <img src="public/images/logo.png" class="logo-frutiger" alt="DevShare">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -67,7 +67,7 @@
           <div class="row align-items-center">
             <div class="col-12 col-lg-8">
               <div class="d-none d-md-block">
-                <img src="resources/imgs/textos.png" class="txt-fruitger img-fluid" alt="Compartilhe seus projetos">
+                <img src="public/images/textos.png" class="txt-fruitger img-fluid" alt="Compartilhe seus projetos">
                 <div class="exp d-flex flex-column flex-sm-row gap-3">
                   <button type="button" class="btn-pst">Poste seu projeto <i class="bi bi-arrow-right fm-4"></i></button>
                   <button type="button" class="btn-exp">Explore projetos</button>
@@ -75,7 +75,7 @@
               </div>
               <div class="d-flex d-md-none flex-column align-items-center gap-4 text-center">
                 <div class="mx-n3 w-100">
-                  <img src="resources/imgs/textos.png" class="img-fluid w-100" alt="Compartilhe seus projetos">
+                  <img src="public/images/textos.png" class="img-fluid w-100" alt="Compartilhe seus projetos">
                 </div>
                 <div class="d-grid gap-3 w-100">
                   <button type="button" class="btn-pst w-100 mw-100">Poste seu projeto <i class="bi bi-arrow-right fm-4"></i></button>
