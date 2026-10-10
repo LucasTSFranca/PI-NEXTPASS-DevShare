@@ -1,3 +1,42 @@
+.btn-azul-claro{
+    background-color: rgba(82, 248, 253, 0.678);
+    backdrop-filter: blur(2px);
+    color: rgba(5, 18, 54, 0.836);
+    border: 1px solid rgba(140, 241, 245, 0.719);
+    border-radius: 2px;
+    box-shadow: 0 3px 2px rgba(113, 210, 255, 0.767);;
+}
+.btn-verde-claro{
+    background-color: rgba(31, 233, 98, 0.74);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(140, 241, 245, 0.719);
+    border-radius: 80px;
+    box-shadow: 0 3px 2px rgba(113, 210, 255, 0.767);
+    color: rgba(5, 18, 54, 0.836);
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-azul-claro:hover{
+    background-color: rgba(12, 240, 248, 0.452);
+    box-shadow: 0 3px 2px rgba(113, 210, 255, 0.767);
+    color: rgba(3, 17, 56, 0.836);
+}
+
+.btn-verde-claro:hover{
+    background-color: rgba(17, 255, 96, 0.74);
+    box-shadow: 0 3px 2px rgba(113, 248, 158, 0.74);
+    color: rgba(3, 17, 56, 0.836);
+}
+
+.ico-footer{
+    color: rgba(0, 0, 0, 0.836);
+    transition: all 0.2s ease-in-out;
+}
+.ctt-link{
+    text-decoration: none; 
+    color:rgb(0, 0, 0);
+}
+--------------------------------------------------------------------------------
 body{
     background-image: url("../images/background.png") center top / cover fixed;
     font-family: "Quicksand", sans-serif;
@@ -166,7 +205,7 @@ body{
 
 
 .rodapé{
-    height: 100px;
-    background: rgba(59, 59, 59, 0.445);
+    height: auto;
+    background: rgba(184, 183, 183, 0.144);
     backdrop-filter: blur(15px);
 }
