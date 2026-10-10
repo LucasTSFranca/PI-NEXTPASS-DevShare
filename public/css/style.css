@@ -1,5 +1,5 @@
-body {
-     background-image: url("../images/background.png") center top / cover fixed;
+body{
+    background-image: url("../images/background.png") center top / cover fixed;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
 }

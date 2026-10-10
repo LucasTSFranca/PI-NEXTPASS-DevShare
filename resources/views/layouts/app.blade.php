@@ -10,7 +10,11 @@
     
 
 </head>
-<body>
+<body class='' style='background-image: url("../images/background.png");
+                      background-size: cover;
+                      background-attachment: fixed; 
+                      background-repeat: no-repeat;
+                      background-position: center;  '>
   <header>
     <nav class="navbar navbar-expand-lg navbar-aero">
       <div class="container-fluid px-3 px-lg-4">
