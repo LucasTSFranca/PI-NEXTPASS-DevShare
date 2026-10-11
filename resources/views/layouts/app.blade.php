@@ -44,8 +44,7 @@
           </form>
 
           <div class="btn-sessao d-flex gap-2 ms-lg-3 mb-3 mb-lg-0">
-            <button type="button" class="btn btn-azul-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6"> Cadastrar</button>
-            <button type="button" class="btn btn-verde-claro rounded-pill rounded  bi bi-person-fill fs-6">Login</button>
+            @yield('btn-sessao')
           </div>
         </div> 
       </div>
