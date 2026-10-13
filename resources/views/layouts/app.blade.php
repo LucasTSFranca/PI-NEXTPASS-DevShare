@@ -54,23 +54,23 @@
   @yield('conteudo')
   </main>
 
-  <footer class="border border-2 border-dark-subtle">
+  <footer class="border border-1 border-dark-subtle">
     <div class="rodapé container-fluid">
       <div class="row">
         <div class='col-12 ctt-link ico-footer fs-3 mb-0 mt-2 d-flex justify-content-center'><strong>Contatos</strong></div>
 
           <div class="col-12 d-flex justify-content-center align-items-center text-center">
-            <div class="cards row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 w-50 m-0 p-md-3 d-flex justify-content-center align-items-center text-center">
+            <div class="cards row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 w-50 m-0 p-md-3 gap-4 d-flex justify-content-center align-items-center text-center">
 
-                <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
+                <div class="col-12 col-lg-2 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
                   <div class="card card-text ratio ratio-16x9 d-flex justify-content-center align-items-center text-center">
                     <strong class="d-flex flex-column justify-content-center align-items-center text-center gap-2">
-                      <a href="https://github.com/LucasTSFranca" target="_blank" class="bi bi-github ctt-link ico-footer fs-5"> Lucas Tenório</a>
+                      <a href="https://github.com/LucasTSFranca" target="_blank" class="bi bi-github ctt-link ico-footer fs-5"> Lucas</a>
                     </strong>
                   </div>
                 </div>
 
-                <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
+                <div class="col-12 col-lg-2 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
                   <div class="card card-text ratio ratio-16x9 d-flex justify-content-center align-items-center text-center">
                     <strong class="d-flex flex-column justify-content-center align-items-center text-center gap-2">
                       <a href="https://github.com/" target="_blank" class="bi bi-github ctt-link ico-footer fs-5"> Luiz</a>
@@ -78,15 +78,15 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
+                <div class="col-12 col-lg-2 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
                   <div class="card card-text ratio ratio-16x9 d-flex justify-content-center align-items-center text-center">
                     <strong class="d-flex flex-column justify-content-center align-items-center text-center gap-2">
-                      <a href="https://github.com/samucs788" target="_blank" class="bi bi-github ctt-link ico-footer fs-5"> Samuel Augusto</a>
+                      <a href="https://github.com/samucs788" target="_blank" class="bi bi-github ctt-link ico-footer fs-5"> Samuel</a>
                     </strong>
                   </div>
                 </div>
 
-                <div class="col-12 col-lg-3 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
+                <div class="col-12 col-lg-2 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
                   <div class="card card-text ratio ratio-16x9 d-flex justify-content-center align-items-center text-center">
                     <strong class="d-flex flex-column justify-content-center align-items-center text-center gap-2">
                       <a href="https://github.com/NextPassPI" target="_blank" class="bi bi-github ctt-link ico-footer fs-5"> NextPass</a>
