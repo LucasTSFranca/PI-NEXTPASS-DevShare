@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'DevShare')
+@section('title', 'DevShare - Home')
 @section('btn-sessao')
     <button type="button" class="btn btn-azul-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6"> Cadastrar</button>
     <button type="button" class="btn btn-verde-claro rounded-pill rounded  bi bi-person-fill fs-6">Login</button>
