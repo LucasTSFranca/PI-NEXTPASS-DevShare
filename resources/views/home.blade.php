@@ -2,7 +2,7 @@
 @section('title', 'DevShare - Home')
 @section('btn-sessao')
     <button type="button" class="btn btn-azul-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6"> Cadastrar</button>
-    <button type="button" class="btn btn-verde-claro rounded-pill rounded  bi bi-person-fill fs-6">Login</button>
+    <a href="{{ route('login') }}" class="btn btn-verde-claro rounded-pill rounded bi bi-person-fill fs-6 text-decoration-none"> Login</a>
 @endsection
 @section('conteudo')
 <section class="banner py-4 py-md-5">

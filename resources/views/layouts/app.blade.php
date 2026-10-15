@@ -54,51 +54,33 @@
   @yield('conteudo')
   </main>
 
-  <footer class="border border-1 border-dark-subtle">
-    <div class="rodapé container-fluid">
-      <div class="row">
-        <div class='col-12 ctt-link ico-footer fs-3 mb-0 mt-2 d-flex justify-content-center'><strong>Contatos</strong></div>
+  <footer class="site-footer">
+    <div class="rodapé container-fluid px-4 px-lg-5 py-4">
+      <div class="row align-items-center gy-4">
+        <div class="col-12 col-lg-5 text-center text-lg-start">
+          <a class="footer-brand" href="{{ route('home') }}">
+            <img src="{{ asset('images/logo.png') }}" alt="" class="footer-logo">
+            <span>DevShare</span>
+          </a>
+          <p class="footer-description mb-0">Um espaço para compartilhar projetos, trocar ideias e crescer em comunidade.</p>
+        </div>
 
-          <div class="col-12 d-flex justify-content-center align-items-center text-center">
-            <div class="cards row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 w-50 m-0 p-md-3 gap-4 d-flex justify-content-center align-items-center text-center">
-
-                <div class="col-12 col-lg-2 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
-                  <div class="card card-text ratio ratio-16x9 d-flex justify-content-center align-items-center text-center">
-                    <strong class="d-flex flex-column justify-content-center align-items-center text-center gap-2">
-                      <a href="https://github.com/LucasTSFranca" target="_blank" class="bi bi-github ctt-link ico-footer fs-5"> Lucas</a>
-                    </strong>
-                  </div>
-                </div>
-
-                <div class="col-12 col-lg-2 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
-                  <div class="card card-text ratio ratio-16x9 d-flex justify-content-center align-items-center text-center">
-                    <strong class="d-flex flex-column justify-content-center align-items-center text-center gap-2">
-                      <a href="https://github.com/" target="_blank" class="bi bi-github ctt-link ico-footer fs-5"> Luiz</a>
-                    </strong>
-                  </div>
-                </div>
-
-                <div class="col-12 col-lg-2 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
-                  <div class="card card-text ratio ratio-16x9 d-flex justify-content-center align-items-center text-center">
-                    <strong class="d-flex flex-column justify-content-center align-items-center text-center gap-2">
-                      <a href="https://github.com/samucs788" target="_blank" class="bi bi-github ctt-link ico-footer fs-5"> Samuel</a>
-                    </strong>
-                  </div>
-                </div>
-
-                <div class="col-12 col-lg-2 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center">
-                  <div class="card card-text ratio ratio-16x9 d-flex justify-content-center align-items-center text-center">
-                    <strong class="d-flex flex-column justify-content-center align-items-center text-center gap-2">
-                      <a href="https://github.com/NextPassPI" target="_blank" class="bi bi-github ctt-link ico-footer fs-5"> NextPass</a>
-                    </strong>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
+        <div class="col-12 col-lg-7">
+          <div class="footer-contact text-center text-lg-end">
+            <h2 class="footer-heading">Feito por quem compartilha</h2>
+            <nav class="footer-links d-flex flex-wrap justify-content-center justify-content-lg-end gap-3" aria-label="Contatos da equipe">
+              <a href="https://github.com/LucasTSFranca" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i> Lucas</a>
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i> Luiz</a>
+              <a href="https://github.com/samucs788" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i> Samuel</a>
+              <a href="https://github.com/NextPassPI" target="_blank" rel="noopener noreferrer"><i class="bi bi-github" aria-hidden="true"></i> NextPass</a>
+            </nav>
           </div>
-        </div>        
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2 mt-4 pt-3">
+        <span>&copy; {{ date('Y') }} DevShare. Todos os direitos reservados.</span>
+        <a href="{{ route('home') }}">Compartilhe seu próximo projeto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
       </div>
     </div>
   </footer>
