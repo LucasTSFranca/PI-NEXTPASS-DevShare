@@ -3,8 +3,8 @@
 @section('title', 'DevShare - Entrar')
 
 @section('btn-sessao')
-    <a href="{{ route('home') }}" class="btn btn-azul-claro rounded-pill text-decoration-none">
-        <i class="bi bi-arrow-left me-1" aria-hidden="true"></i> Início
+    <a href="{{ route('cadastro') }}" class="btn btn-azul-claro rounded-pill text-decoration-none">
+         cadastrar
     </a>
 @endsection
 
@@ -12,7 +12,7 @@
     <section class="login-section d-flex justify-content-center align-items-center">
         <div class="login-card">
             <div class="text-center mb-4">
-                <span class="login-eyebrow">Bem-vindo de volta</span>
+                <span class="login-eyebrow">Bem-vindo</span>
                 <h1 class="mt-2 mb-2">Entre na DevShare</h1>
                 <p class="login-copy mb-0">Acesse sua conta para continuar compartilhando ideias.</p>
             </div>
@@ -22,8 +22,7 @@
                     {{ $errors->first() }}
                 </div>
             @endif
-
-            <form method="POST" action="{{ route('login.store') }}">
+            <form method="POST" action="{{ route('login') }}">
                 @csrf
 
                 <div class="mb-3">

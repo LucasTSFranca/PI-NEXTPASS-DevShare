@@ -1,30 +1,27 @@
 <?php
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+// usuario sem lgoar
+Route::middleware('guest')->group(function () {
+    Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
 
-Route::get('/login', function () {
-    return view('layouts.login');
-})->name('login');
+    Route::get('/cadastro', [AuthController::class, 'showCadastro'])->name('cadastro');
+    Route::post('/cadastro', [AuthController::class, 'cadastro']);
 
-Route::post('/login', function (Request $request) {
-    $credentials = $request->validate([
-        'email' => ['required', 'email'],
-        'password' => ['required', 'string'],
-    ]);
+    Route::get('/', [AuthController::class, 'showhome'])->name('home');
 
-    if (! Auth::attempt($credentials, $request->boolean('remember'))) {
-        return back()
-            ->withErrors(['email' => 'Email ou senha incorretos.'])
-            ->onlyInput('email');
-    }
-
-    $request->session()->regenerate();
-
-    return redirect()->intended(route('home'));
-})->name('login.store');
+});
+Route::middleware('auth')->group(function () {
+    Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    
+    // Exemplo de rota protegida do painel do usuário
+    //NAO DA PRA VER A INICIO SE N ESTIVER LOGADO
+    //FAZ ESSA TELA DE INICIO AGR E CHAMA ELA POR ESSA ROTA AQUI
+    //DPS EU AJUSTO O CONTROLLER DELA
+    Route::get('/inicio', function () {
+        return view('inicio');
+    })->name('inicio');
+});
