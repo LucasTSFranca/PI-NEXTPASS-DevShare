@@ -1,8 +1,10 @@
 @extends('layouts.app')
 @section('title', 'DevShare - Home')
 @section('btn-sessao')
-    <a href="{{ route('cadastro') }}" class="btn btn-azul-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6 text-decoration-none"> Cadastrar</a>
-    <a href="{{ route('login') }}" class="btn btn-verde-claro rounded-pill rounded bi bi-person-fill fs-6 text-decoration-none"> Login</a>
+  <form action="{{ route('logout') }}" method="POST">
+    @csrf
+    <button type="submit" class="btn btn-azul-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6 text-decoration-none">Sair</button>
+  </form>
 @endsection
 @section('conteudo')
 <section class="banner py-4 py-md-5">

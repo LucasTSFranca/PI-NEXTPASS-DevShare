@@ -9,39 +9,29 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
-    //tela de login
-    public function showLogin()
+    public function logout(Request $request)
     {
-        return view('login');
-    }
-    //tela home-inicio
-    public function showHome()
-    {
-        return view('home');
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login');
     }
 
-        //Isso é pra tela de cadastro, quando vc fizer manda a rota pra cá
-    public function showCadastro()
-    {
-        return view('cadastro');
-    }
-
-    // Processa o login
     public function login(Request $request)
     {
-        // Valida os campos o mesmo que tava faz na route anteriormente
+
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
-        $remember = $request->has('remember'); // Essa bomba é para manter conctado cuidado
+        $remember = $request->has('remember'); 
 
         // verifica as info no banco e tenta logar
         if (Auth::attempt($credentials, $remember)) {
             $request->session()->regenerate();
 
-            // Redireciona para a pagina(por enquanto vai pra home msm)
             return redirect()->intended('home');
         }
 
@@ -53,8 +43,7 @@ class AuthController extends Controller
 
 
 
-    // controle de cadastro
-    public function cadastro(Request $request)
+    public function register(Request $request)
     {
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
@@ -72,5 +61,6 @@ class AuthController extends Controller
             //to mandando de volta para fazer o login
         return redirect()->route('login');
     }
+
 
 }
