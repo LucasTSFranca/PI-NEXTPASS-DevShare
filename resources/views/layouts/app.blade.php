@@ -10,11 +10,8 @@
     @vite('resources/css/app.css', 'resources/js/app.js')
 
 </head>
-<body class='' style='background-image: url("/images/background.png");
-                      background-size: cover;
-                      background-attachment: fixed; 
-                      background-repeat: no-repeat;
-                      background-position: center;  '>
+<body class="@yield('body-class')">
+  <img class="page-background" src="{{ asset(request()->routeIs('index') ? 'images/fundo2.png' : 'images/background.png') }}" alt="" aria-hidden="true">
   <header>
     <nav class="navbar navbar-expand-lg navbar-aero">
       <div class="container-fluid px-3 px-lg-4">
