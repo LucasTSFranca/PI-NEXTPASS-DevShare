@@ -200,6 +200,19 @@ body{
     left: -50px;
 }
 
+.banner-image{
+    width: 55%;
+}
+
+.banner-search-form{
+    width: min(100%, 28rem);
+}
+
+.banner-search-form .form-control{
+    min-height: 3rem;
+    padding-inline: 1.25rem;
+}
+
 .form-control{
     background: rgba(1, 183, 255, 0.5);
     backdrop-filter: blur(15px);
@@ -341,3 +354,12 @@ body{
     filter: drop-shadow(0 0 8px rgba(163, 255, 59, 0.9));
 }
 
+.txt-fruitger2{
+    position: relative;
+}
+
+.pesquisa-sup{
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
