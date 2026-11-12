@@ -14,11 +14,7 @@
                 <img src="{{ asset('images/texto2.png') }}" class="txt-fruitger2 img-fluid banner-image" alt="Compartilhe seus projetos">
           </div>
 
-          <div class="pesquisa-sup">
-          <form class="d-flex banner-search-form text-light mx-lg-3 my-3 my-lg-0" role="search">
-            <input class="form-control" type="search" placeholder="Pesquisar por pessoas, projetos, tags..." aria-label="Buscar"/>
-          </form>
-          </div>
+         
         </div>
         </div>
 

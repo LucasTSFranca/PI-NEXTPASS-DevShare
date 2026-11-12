@@ -26,15 +26,11 @@
             <li class="nav-item">
               <a class="nav-link active-info" aria-current="page" href="{{ route('home')}}"><i class="bi bi-house me-2" aria-hidden="true"></i>Início</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-people-fill me-2"></i>Comunidade</a>
-            </li>
+        
             <li class="nav-item">
               <a class="nav-link" href="#"><i class="bi bi-compass me-2"></i>Explorar</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-info-circle me-2"></i>Sobre</a>
-            </li>                 
+                          
           </ul>
           <form class="d-flex flex-grow-1 flex-lg-grow-0 search-form text-light mx-lg-3 my-3 my-lg-0" role="search">
             <input class="form-control" type="search" placeholder="Buscar..." aria-label="Buscar"/>

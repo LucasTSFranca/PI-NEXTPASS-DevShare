@@ -3,8 +3,8 @@
 @section('title', 'DevShare - Entrar')
 
 @section('btn-sessao')
-    <a href="{{ route('register') }}" class="btn btn-azul-claro rounded-pill text-decoration-none">
-         cadastrar
+    <a href="{{ route('register') }}" class="btn btn-azul-claro rounded-pill bi bi-person-plus-fill fs-6 text-decoration-none">
+         Cadastrar
     </a>
 @endsection
 
