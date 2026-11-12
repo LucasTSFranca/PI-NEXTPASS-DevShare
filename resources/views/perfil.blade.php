@@ -7,4 +7,6 @@
 @endsection
 @section('conteudo')
 
+<main class="container-fluid px-lg-5 py-
+
 @endsection
