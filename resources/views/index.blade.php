@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('title', 'DevShare')
+@section('body-class', 'index-page')
 @section('btn-sessao')
     <a href="{{ route('register') }}" class="btn btn-azul-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6 text-decoration-none"> Cadastrar</a>
     <a href="{{ route('login') }}" class="btn btn-verde-claro rounded-pill rounded bi bi-person-fill fs-6 text-decoration-none"> Login</a>
@@ -10,63 +11,81 @@
           <div class="row align-items-center">
             <div class="col-12 col-lg-8">
               <div class="d-none d-md-block">
-                <img src="{{ asset('images/textos.png') }}" class="txt-fruitger img-fluid" alt="Compartilhe seus projetos">
-                <div class="exp d-flex flex-column flex-sm-row gap-3">
-                  <button type="button" class="btn-pst">Poste seu projeto <i class="bi bi-arrow-right fm-4"></i></button>
-                  <button type="button" class="btn-exp">Explore projetos</button>
-                </div>
-              </div>
-              <div class="d-flex d-md-none flex-column align-items-center gap-4 text-center">
-                <div class="mx-n3 w-100">
-                  <img src="{{ asset('images/textos.png') }}" class="img-fluid w-100" alt="Compartilhe seus projetos">
-                </div>
-                <div class="d-grid gap-3 w-100">
-                  <button type="button" class="btn-pst w-100 mw-100">Poste seu projeto <i class="bi bi-arrow-right fm-4"></i></button>
-                  <button type="button" class="btn-exp w-100 mw-100">Explore projetos</button>
-                </div>
-              </div>
-            </div>
+                <img src="{{ asset('images/texto2.png') }}" class="txt-fruitger2 img-fluid banner-image" alt="Compartilhe seus projetos">
           </div>
-        </div>
-        
-      </section>
 
-      <section class="container-fluid px-3 px-md-4 py-4">
+         
+        </div>
+        </div>
+
         <div class="row">
           <div class="col-12">
-            <div class="explicar w-100 h-auto p-3 p-md-4">
-              <div class="row align-items-center g-4">
-                <div class="col-12 col-md-4">
-                  <div class="expl-text ms-0 mt-2 mt-md-3">
-                    <h3><strong>Por quê compartilhar?</strong><br></h3>
-                    <h5>Aqui, o seu projeto encontra<br> pessoas que entendem</h5>
-                  </div>
-                </div>
-
-                <div class="col-12 col-md-8">
-                  <div class="cards row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 w-100 h-auto m-0 p-2 p-md-3">
-                      <div class="col"><div class="card card-text ratio ratio-1x1 d-flex justify-content-center align-items-center text-center">
-                        <strong class="d-flex flex-column justify-content-center align-items-center text-center w-100 h-100 gap-2"><i class="bi bi-rocket-takeoff-fill fs-1"></i>Ganhe Visibilidade</strong>
-                    </div>
-                  </div>
-                      <div class="col"><div class="card card-text ratio ratio-1x1 d-flex justify-content-center align-items-center text-center">
-                        <strong class="d-flex flex-column justify-content-center align-items-center text-center w-100 h-100 gap-2"><i class="bi bi-chat-dots fs-1"></i>Receba Feedbacks</strong>
-                    </div>
-                  </div>
-                      <div class="col"><div class="card card-text ratio ratio-1x1 d-flex justify-content-center align-items-center text-center">
-                        <strong class="d-flex flex-column justify-content-center align-items-center text-center w-100 h-100 gap-2"><i class="bi bi-share fs-1"></i>Conecte-se</strong>
-                    </div>
-                  </div>
-                      <div class="col"><div class="card card-text ratio ratio-1x1 d-flex justify-content-center align-items-center text-center">
-                        <strong class="d-flex flex-column justify-content-center align-items-center text-center w-100 h-100 gap-2"><i class="bi bi-star fs-1"></i>Explore novas ideias</strong>
-                    </div>
-                  </div>
-                  </div>
-                </div>
+            <section class="category-section" aria-labelledby="category-title">
+              <h2 class="category-title" id="category-title">Navegue por categorias</h2>
+              <div class="category-buttons" aria-label="Categorias de projetos">
+                <button type="button" class="category-button">
+                  <span class="category-button-top">
+                    <i class="bi bi-laptop category-button-icon" aria-hidden="true"></i>
+                    <span class="category-button-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                  </span>
+                  <span class="category-button-label">Desenvolvimento</span>
+                  <span class="category-button-meta">Explore projetos</span>
+                </button>
+                <button type="button" class="category-button">
+                  <span class="category-button-top">
+                    <i class="bi bi-joystick category-button-icon" aria-hidden="true"></i>
+                    <span class="category-button-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                  </span>
+                  <span class="category-button-label">Jogos</span>
+                  <span class="category-button-meta">Explore projetos</span>
+                </button>
+                <button type="button" class="category-button">
+                  <span class="category-button-top">
+                    <i class="bi bi-palette category-button-icon" aria-hidden="true"></i>
+                    <span class="category-button-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                  </span>
+                  <span class="category-button-label">Design</span>
+                  <span class="category-button-meta">Explore projetos</span>
+                </button>
+                <button type="button" class="category-button">
+                  <span class="category-button-top">
+                    <i class="bi bi-phone category-button-icon" aria-hidden="true"></i>
+                    <span class="category-button-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                  </span>
+                  <span class="category-button-label">Aplicativos</span>
+                  <span class="category-button-meta">Explore projetos</span>
+                </button>
+                <button type="button" class="category-button">
+                  <span class="category-button-top">
+                    <i class="bi bi-globe category-button-icon" aria-hidden="true"></i>
+                    <span class="category-button-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                  </span>
+                  <span class="category-button-label">Web</span>
+                  <span class="category-button-meta">Explore projetos</span>
+                </button>
+                <button type="button" class="category-button">
+                  <span class="category-button-top">
+                    <i class="bi bi-box category-button-icon" aria-hidden="true"></i>
+                    <span class="category-button-arrow" aria-hidden="true"><i class="bi bi-arrow-right"></i></span>
+                  </span>
+                  <span class="category-button-label">Outros</span>
+                  <span class="category-button-meta">Explore projetos</span>
+                </button>
               </div>
-            </div>
+            </section>
           </div>
         </div>
+      </div>
+
+      <section class="project-showcase" aria-labelledby="project-showcase-title">
+        <h2 class="project-showcase-title" id="project-showcase-title">Projetos em destaque</h2>
+        <div class="project-showcase-cards" aria-label="Espaços para cards de projetos">
+          <article class="project-card" aria-hidden="true"></article>
+          <article class="project-card" aria-hidden="true"></article>
+          <article class="project-card" aria-hidden="true"></article>
+          <article class="project-card" aria-hidden="true"></article>
+          <article class="project-card" aria-hidden="true"></article>
+        </div>
       </section>
-  
+</section>
 @endsection

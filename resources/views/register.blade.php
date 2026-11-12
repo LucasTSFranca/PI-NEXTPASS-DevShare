@@ -3,8 +3,8 @@
 @section('title', 'DevShare - Cadastrar')
 
 @section('btn-sessao')
-    <a href="{{ route('login') }}" class="btn btn-azul-claro rounded-pill text-decoration-none">
-         entrar
+    <a href="{{ route('login') }}" class="btn btn-azul-claro rounded-pill bi bi-person-fill fs-6 text-decoration-none">
+         Entrar
     </a>
     </a>
 @endsection
@@ -66,6 +66,7 @@
                         id="password"
                         name="password"
                         type="password"
+                        minlength="8"
                         class="form-control @error('password') is-invalid @enderror"
                         placeholder="Digite sua senha"
                         required
@@ -74,6 +75,39 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
+
+                <div class="mb-3">
+                    <label for="birth_date" class="form-label">Data de Nascimento</label>
+                    <input
+                        id="birth_date"
+                        name="birth_date"
+                        type="date"
+                        class="form-control @error('birth_date') is-invalid @enderror"
+                        value="{{ old('birth_date') }}"
+                        placeholder="00/00/0000"
+                        required
+                    >
+                    @error('birth_date')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Telefone</label>
+                    <input
+                        id="phone"
+                        name="phone"
+                        type="text"
+                        class="form-control @error('phone') is-invalid @enderror"
+                        value="{{ old('phone') }}"
+                        placeholder="(00) 00000-0000"
+                        maxlength="11"
+                        required
+                    >
+                    @error('phone')
+                        <div class="invalid-feedback">{{ $message }}</div> 
+                    @enderror
+</div>
                 
 
                 <button type="submit" class="btn login-submit w-100">Cadastrar</button>

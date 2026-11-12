@@ -21,4 +21,8 @@ class InitController extends Controller
     public function register(){
         return view('register');
     }
+
+    public function Perfil(){
+        return view('perfil');
+    }
 }
