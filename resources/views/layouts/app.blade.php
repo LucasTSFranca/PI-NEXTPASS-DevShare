@@ -15,7 +15,7 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-aero">
       <div class="container-fluid px-3 px-lg-4">
-        <a class="navbar-brand" href="{{ route('home')}}">
+        <a class="navbar-brand" href="{{ route('index')}}">
           <img src="{{ asset('images/logo.png') }}" class="logo-frutiger" alt="DevShare">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto align-items-lg-center justify-content-center mb-2 mb-lg-0 gap-lg-3">
             <li class="nav-item">
-              <a class="nav-link active-info" aria-current="page" href="{{ route('home')}}"><i class="bi bi-house me-2" aria-hidden="true"></i>Início</a>
+              <a class="nav-link active-info" aria-current="page" href="{{ route('index')}}"><i class="bi bi-house me-2" aria-hidden="true"></i>Início</a>
             </li>
         
             <li class="nav-item">
