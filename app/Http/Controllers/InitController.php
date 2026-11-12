@@ -22,7 +22,7 @@ class InitController extends Controller
         return view('register');
     }
 
-    public function Perfil(){
-        return view('perfil');
+    public function profile(){
+        return view('profile');
     }
 }

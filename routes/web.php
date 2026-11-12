@@ -24,6 +24,6 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    Route::get('/perfil', [InitController::class, 'perfil'])->name('perfil');
+    Route::get('/perfil', [InitController::class, 'profile'])->name('profile');
 
 });
