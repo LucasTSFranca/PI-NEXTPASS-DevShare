@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InitController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PublishController;
 
 
 // Rotas para usuários não autenticados
@@ -25,5 +26,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
     Route::get('/profile', [InitController::class, 'profile'])->name('profile');
+
+    Route::get('publish',[InitController::class, 'publish'])->name('publish');
+
+    Route::post('publish',[PublishController::class,'publish'])->name('publish.post');
 
 });
