@@ -9,7 +9,7 @@ use App\Http\Controllers\PublishController;
 // Rotas para usuários não autenticados
 Route::middleware('guest')->group(function () {
 
-    Route::get('/', [InitController::class, 'index'])->name('index');
+    Route::get('/', [InitController::class, 'profile'])->name('profile');
 
     Route::get('/login', [InitController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'login'])->name('login.post');

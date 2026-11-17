@@ -7,15 +7,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    @vite('resources/css/app.css', 'resources/js/app.js')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
 <body class="@yield('body-class')">
-  <img class="page-background" src="{{ asset(request()->routeIs('index') ? 'images/fundo2.png' : 'images/background.png') }}" alt="" aria-hidden="true">
+  <img class="page-background" src="{{ asset(request()->routeIs('index', 'profile') ? 'images/fundo2.png' : 'images/background.png') }}" alt="" aria-hidden="true">
   <header>
     <nav class="navbar navbar-expand-lg navbar-aero">
       <div class="container-fluid px-3 px-lg-4">
-        <a class="navbar-brand" href="{{ route('index')}}">
+        <a class="navbar-brand" href="{{ url('/') }}">
           <img src="{{ asset('images/logo.png') }}" class="logo-frutiger" alt="DevShare">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto align-items-lg-center justify-content-center mb-2 mb-lg-0 gap-lg-3">
             <li class="nav-item">
-              <a class="nav-link active-info" aria-current="page" href="{{ route('index')}}"><i class="bi bi-house me-2" aria-hidden="true"></i>Início</a>
+              <a class="nav-link active-info" aria-current="page" href="{{ url('/') }}"><i class="bi bi-house me-2" aria-hidden="true"></i>Início</a>
             </li>
         
             <li class="nav-item">
