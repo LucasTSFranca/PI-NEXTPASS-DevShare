@@ -42,6 +42,24 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
+
+                <div class="mb-3">
+                    <label for="username" class="form-label">Nome de usuário</label>
+                    <input
+                        id="username"
+                        name="username"
+                        type="text"
+                        class="form-control @error('username') is-invalid @enderror"
+                        value="{{ old('username') }}"
+                        placeholder="Seu nome de usuário"
+                        autocomplete="username"
+                        required
+                    >
+                    @error('username')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
+                
                 <div class="mb-3">
                     <label for="email" class="form-label">Email</label>
                     <input
