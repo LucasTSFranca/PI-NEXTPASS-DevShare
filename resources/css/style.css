@@ -575,6 +575,54 @@ body{
     object-fit: cover;
 }
 
+.profile-avatar-form{
+    display: grid;
+    justify-items: center;
+    gap: 0.35rem;
+    margin-top: 0.9rem;
+}
+
+.profile-avatar-submit{
+    padding: 0.35rem 0.65rem;
+    border: 1px solid rgba(146, 244, 255, 0.6);
+    border-radius: 999px;
+    background: rgba(0, 83, 169, 0.72);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.profile-avatar-file{
+    width: 13rem;
+    max-width: 100%;
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+.profile-avatar-file::file-selector-button{
+    margin-right: 0.4rem;
+    padding: 0.35rem 0.55rem;
+    border: 1px solid rgba(146, 244, 255, 0.6);
+    border-radius: 999px;
+    background: rgba(0, 83, 169, 0.72);
+    color: #fff;
+    cursor: pointer;
+}
+
+.profile-avatar-submit:hover,
+.profile-avatar-file::file-selector-button:hover{
+    background: rgba(0, 190, 235, 0.68);
+}
+
+.profile-avatar-error,
+.profile-avatar-success{
+    max-width: 11rem;
+    color: #fff;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
 .profile-status{
     position: absolute;
     right: 0.35rem;
