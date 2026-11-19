@@ -12,11 +12,6 @@
 @section('conteudo')
     <main class="publication-main">
         <section class="profile-content" aria-label="Publicar projeto">
-           
-
-               
-            </aside>
-
             <section class="project-card" aria-labelledby="publication-title">
                 <header class="project-heading">
                     <i class="bi bi-rocket-takeoff-fill" aria-hidden="true"></i>
@@ -26,22 +21,32 @@
                     </div>
                 </header>
 
-                <div class="project-fields">
+                <form action="{{ route('publish.post') }}" method="POST" enctype="multipart/form-data" class="project-fields">
+                    @csrf
+
+                    @if ($errors->any())
+                        <div class="alert alert-danger mb-0" role="alert">
+                            @foreach ($errors->all() as $error)
+                                <div>{{ $error }}</div>
+                            @endforeach
+                        </div>
+                    @endif
+
                     <div class="project-field">
                         <label for="project-title">Título do projeto <span>*</span></label>
-                        <input id="project-title" name="title" type="text" placeholder="Ex: Meu Portfólio Web" required>
+                        <input id="project-title" name="title" type="text" value="{{ old('title') }}" placeholder="Ex: Meu Portfólio Web" maxlength="255" required>
                     </div>
 
                     <div class="project-field">
                         <label for="project-description">Descrição <span>*</span></label>
-                        <textarea id="project-description" name="content" maxlength="1000" placeholder="Conte um pouco sobre seu projeto..." required></textarea>
-                        <output class="project-counter" for="project-description">0/1000</output>
+                        <textarea id="project-description" name="content" maxlength="1000" placeholder="Conte um pouco sobre seu projeto..." required>{{ old('content') }}</textarea>
+                        <output class="project-counter" for="project-description">{{ strlen(old('content', '')) }}/1000</output>
                     </div>
 
                     <div class="project-details">
                         <div class="project-field">
                             <label for="project-image">Imagem de capa</label>
-                            <input class="project-file-input" id="project-image" name="image" type="file" accept="image/png,image/jpeg,image/webp">
+                            <input class="project-file-input" id="project-image" name="image" type="file" accept="image/png,image/jpeg,image/webp" required>
                             <label class="project-upload" for="project-image">
                                 <i class="bi bi-cloud-arrow-up" aria-hidden="true"></i>
                                 <strong>Arraste uma imagem aqui ou clique para selecionar</strong>
@@ -56,10 +61,13 @@
                                     <i class="bi bi-code-slash" aria-hidden="true"></i>
                                     <select id="project-category" name="category" required>
                                         <option value="" selected disabled>Selecione uma categoria</option>
-                                        <option value="web">Desenvolvimento Web</option>
-                                        <option value="mobile">Aplicativo Mobile</option>
-                                        <option value="design">Design</option>
-                                        <option value="other">Outro</option>
+                                        @foreach ($categories as $category)
+                                            <option value="{{ $category->id }}" @selected(old('category') == $category->id)>
+                                                {{ $category->name }}
+
+                                                
+                                            </option>
+                                        @endforeach
                                     </select>
                                     <i class="bi bi-chevron-down project-select-arrow" aria-hidden="true"></i>
                                 </div>
@@ -79,10 +87,13 @@
                     </div>
 
                     <div class="project-submit-row">
-                        
-                        <button class="project-publish-button" type="button"><i class="bi bi-send" aria-hidden="true"></i>Publicar Projeto<i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+                        <button class="project-publish-button" type="submit">
+                            <i class="bi bi-send" aria-hidden="true"></i>
+                            Publicar Projeto
+                            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                        </button>
                     </div>
-                </div>
+                </form>
             </section>
 
             <aside class="publication-aside" aria-label="Dicas e anúncios">

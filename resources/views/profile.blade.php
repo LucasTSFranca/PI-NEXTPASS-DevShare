@@ -2,21 +2,26 @@
 @section('title', 'Meu perfil - DevShare')
 @section('body-class', 'profile-page')
 @section('btn-sessao')
- <a href="{{ route('register') }}" class="btn btn-azul-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6 text-decoration-none"> Cadastrar</a>
-    <a href="{{ route('login') }}" class="btn btn-verde-claro rounded-pill rounded bi bi-person-fill fs-6 text-decoration-none"> Login</a>
+  <form action="{{ route('logout') }}" method="POST">
+    @csrf
+    <button type="submit" class="btn btn-azul-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6 text-decoration-none">Sair</button>
+  </form>
 @endsection
 @section('conteudo')
 <div class="profile-shell container-fluid px-3 px-lg-4">
     <section class="profile-hero" id="perfil" aria-labelledby="profile-name">
         <div class="profile-identity">
             <div class="profile-avatar-wrap">
-                <img class="profile-avatar" src="{{ asset('images/user2.png') }}" alt="Foto de perfil">
-                <span class="profile-status" aria-label="Online"></span>
+                <img
+                    class="profile-avatar"
+                    src="{{asset('images/user2.png') }}"
+                    alt="Foto de perfil de {{ $user->name }}"
+                >
             </div>
             <div class="profile-intro">
                 <span class="profile-eyebrow">Seu espaço na comunidade</span>
-                <h1 id="profile-name">Samuel.dev <i class="bi bi-patch-check-fill profile-verified" aria-label="Perfil verificado"></i></h1>
-                <p class="profile-handle">@samuel.dev</p>
+                <h1 id="profile-name">{{ $user->name }} <i class="bi bi-patch-check-fill profile-verified" aria-label="Perfil verificado"></i></h1>
+                <p class="profile-handle">{{ '@' . $user->username }}</p>
                 <p class="profile-bio">Desenvolvedor em constante evolução.<br> Criar, aprender e compartilhar. 🚀</p>
             </div>
         </div>

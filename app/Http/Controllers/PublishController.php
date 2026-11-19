@@ -11,14 +11,20 @@ class PublishController extends Controller
 
         $validated = $request->validate([
             'title' => ['required', 'string', 'max:255'],
-            'content' => ['required', 'text', 'max:255'],
-            'image' => ['required', 'string', 'max:255']
+            'content' => ['required', 'string', 'max:1000'],
+            'category' => ['required', 'integer', 'exists:categories,id'],
+            'image' => ['required', 'image', 'mimes:png,jpg,jpeg,webp', 'max:5120'],
         ]);
 
-        $publish = Publication::create([
+        $imagePath = $request->file('image')->store('publications', 'public');
+
+        Publication::create([
+            'user_id' => $request->user()->id,
+            'category_id' => $validated['category'],
             'title' => $validated['title'],
-            'username' => $validated['username'],
-            'is_premium' => false,       // Padrão comum
+            'content' => $validated['content'],
+            'image' => $imagePath,
+            'is_published' => true,
         ]);
 
         // Redireciona de volta para fazer o login

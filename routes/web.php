@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ViewController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublishController;
 
+Route::get('/explore', [ViewController::class, 'explore'])->name('explore');
 
 // Rotas para usuários não autenticados
 Route::middleware('guest')->group(function () {
@@ -25,7 +27,8 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    Route::get('/profile', [ViewController::class, 'profile'])->name('profile');
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
+    Route::post('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar');
 
     Route::get('publish',[ViewController::class, 'publish'])->name('publish');
 

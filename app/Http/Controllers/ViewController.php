@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Category;
 
 class ViewController extends Controller
 {
@@ -26,7 +26,21 @@ class ViewController extends Controller
          return view('profile');
     }
 
+    public function explore(){
+        return view('explore', [
+            'categories' => Category::where('is_active', true)->orderBy('name')->get(),
+        ]);
+    }
+
     public function publication(){
-         return view('publication');
+         return view('publication', [
+             'categories' => Category::where('is_active', true)->orderBy('name')->get(),
+         ]);
+    }
+
+    public function publish(){
+         return view('publication', [
+             'categories' => Category::where('is_active', true)->orderBy('name')->get(),
+         ]);
     }
 }
