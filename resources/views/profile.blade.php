@@ -38,7 +38,7 @@
             </article>
         </div>
     </section>
-
+@section('profile-content')
     <div class="profile-layout">
         <nav class="profile-sidebar" aria-label="Navegação do perfil">
             <button type="button" class="profile-menu-link is-active"><i class="bi bi-house-door-fill" aria-hidden="true"></i>Início</button>
@@ -46,7 +46,7 @@
             <button type="button" class="profile-menu-link"><i class="bi bi-gear-fill" aria-hidden="true"></i>Configurações</button>
             <button type="button" class="profile-menu-link"><i class="bi bi-box-arrow-right" aria-hidden="true"></i>Sair</button>
         </nav>
-
+@endsection
         <div class="profile-main-column">
             <section class="profile-panel" id="projetos" aria-labelledby="projects-title">
                 <div class="profile-panel-heading">

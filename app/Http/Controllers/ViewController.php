@@ -25,4 +25,8 @@ class ViewController extends Controller
     public function profile(){
          return view('profile');
     }
+
+    public function publication(){
+         return view('publication');
+    }
 }
