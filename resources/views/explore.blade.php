@@ -1,5 +1,5 @@
-@extends('layouts.app')
 
+@extends('layouts.app_alt')
 @section('title', 'Explorar - DevShare')
 @section('body-class', 'explore-page')
 

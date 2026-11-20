@@ -27,11 +27,10 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    Route::get('/profile', [ProfileController::class, 'show'])->name('profile');
-    Route::post('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.avatar');
+    Route::get('/profile', [ProfileController::class, 'profile']) ->name('profile');
+    Route::post('/profile/avatar', [ProfileController::class, 'updateAvatar'])->name('profile.updateAvatar');
 
     Route::get('publish',[ViewController::class, 'publish'])->name('publish');
-
     Route::post('publish',[PublishController::class,'publish'])->name('publish.post');
 
 
