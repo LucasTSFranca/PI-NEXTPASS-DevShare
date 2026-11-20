@@ -6,6 +6,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PublishController;
 
+Route::get('/explore', [ViewController::class, 'explore'])->name('explore');
 
 // Rotas para usuários não autenticados
 Route::middleware('guest')->group(function () {

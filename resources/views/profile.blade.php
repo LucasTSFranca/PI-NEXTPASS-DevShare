@@ -131,7 +131,7 @@
         </div>
 
     </section>
-
+@section('profile-content')
     <div class="profile-layout">
 
         <nav class="profile-sidebar" aria-label="Navegação do perfil">
@@ -157,7 +157,7 @@
             </button>
 
         </nav>
-
+@endsection
         <div class="profile-main-column">
 
             <section class="profile-panel" id="projetos" aria-labelledby="projects-title">

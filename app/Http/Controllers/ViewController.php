@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Category;
+use App\Models\Publication;
 
 class ViewController extends Controller
 {
@@ -24,5 +25,31 @@ class ViewController extends Controller
 
     public function profile(){
          return view('profile');
+    }
+
+    public function explore(){
+        $publications = Publication::query()
+            ->where('is_published', true)
+            ->with(['category', 'user'])
+            ->latest()
+            ->get();
+
+        return view('explore', [
+            'categories' => Category::where('is_active', true)->orderBy('name')->get(),
+            'featuredPublications' => $publications->take(3),
+            'recentPublications' => $publications,
+        ]);
+    }
+
+    public function publication(){
+         return view('publication', [
+             'categories' => Category::where('is_active', true)->orderBy('name')->get(),
+         ]);
+    }
+
+    public function publish(){
+         return view('publication', [
+             'categories' => Category::where('is_active', true)->orderBy('name')->get(),
+         ]);
     }
 }

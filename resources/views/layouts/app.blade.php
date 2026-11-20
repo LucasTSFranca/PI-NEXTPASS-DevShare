@@ -28,7 +28,7 @@
             </li>
         
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="bi bi-compass me-2"></i>Explorar</a>
+              <a class="nav-link" href="{{ route('explore') }}"><i class="bi bi-compass me-2"></i>Explorar</a>
             </li>
                           
           </ul>
