@@ -6,7 +6,7 @@
 @section('btn-sessao')
     <form action="{{ route('logout') }}" method="POST">
     @csrf
-    <button type="submit" class="btn btn-azul-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6 text-decoration-none">Sair</button>
+    <button type="submit" class="btn btn-azul-claro  rounded-pill rounded  bi bi-door-open fs-6 text-decoration-none">Sair</button>
   </form>
    <a href="{{ route('profile') }}"><button type="button" class="btn btn-verde-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6 text-decoration-none">Perfil</button></a>
 @endsection
