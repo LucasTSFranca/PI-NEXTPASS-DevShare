@@ -1,12 +1,14 @@
-@extends('layouts.app')
 
+@extends('layouts.app_alt')
 @section('title', 'Explorar - DevShare')
 @section('body-class', 'explore-page')
 
 @section('btn-sessao')
-    <a href="{{ route('login') }}" class="btn btn-azul-claro rounded-pill bi bi-person-fill fs-6 text-decoration-none">
-         Entrar
-    </a>
+    <form action="{{ route('logout') }}" method="POST">
+    @csrf
+    <button type="submit" class="btn btn-azul-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6 text-decoration-none">Sair</button>
+  </form>
+   <a href="{{ route('profile') }}"><button type="button" class="btn btn-verde-claro  rounded-pill rounded  bi bi-person-plus-fill fs-6 text-decoration-none">Perfil</button></a>
 @endsection
 
 @section('conteudo')
@@ -22,12 +24,30 @@
     <section class="explore-categories" aria-labelledby="category-title">
         <h2 class="explore-category-title" id="category-title">Navegue por categorias</h2>
         <div class="explore-category-buttons" aria-label="Categorias de projetos">
-            @foreach ($categories as $category)
-                <button type="button" class="explore-category-button" data-category="{{ $category->name }}">
-                    <i class="bi bi-tag-fill" aria-hidden="true"></i>
-                    <span>{{ $category->name }}</span>
-                </button>
-            @endforeach
+            <button type="button" class="explore-category-button" data-category="Desenvolvimento">
+                <i class="bi bi-laptop" aria-hidden="true"></i>
+                <span>Desenvolvimento</span>
+            </button>
+            <button type="button" class="explore-category-button" data-category="Jogos">
+                <i class="bi bi-joystick" aria-hidden="true"></i>
+                <span>Jogos</span>
+            </button>
+            <button type="button" class="explore-category-button" data-category="Design">
+                <i class="bi bi-palette" aria-hidden="true"></i>
+                <span>Design</span>
+            </button>
+            <button type="button" class="explore-category-button" data-category="Aplicativos">
+                <i class="bi bi-phone" aria-hidden="true"></i>
+                <span>Aplicativos</span>
+            </button>
+            <button type="button" class="explore-category-button" data-category="Web">
+                <i class="bi bi-globe" aria-hidden="true"></i>
+                <span>Web</span>
+            </button>
+            <button type="button" class="explore-category-button" data-category="Outros">
+                <i class="bi bi-box" aria-hidden="true"></i>
+                <span>Outros</span>
+            </button>
         </div>
     </section>
 
@@ -39,23 +59,9 @@
 
         <div class="explore-featured-layout">
             <div class="explore-project-grid" aria-label="Projetos em destaque">
-                @forelse ($featuredPublications as $publication)
-                    <article class="explore-project-card" data-category="{{ $publication->category?->name }}">
-                        <img
-                            class="explore-project-image"
-                            src="{{ str_starts_with($publication->image, 'images/')
-                                ? asset($publication->image)
-                                : asset('storage/' . ltrim($publication->image, '/')) }}"
-                            alt="Imagem do projeto {{ $publication->title }}"
-                        >
-                        <div class="explore-project-info">
-                            <strong>{{ $publication->title }}</strong>
-                            <span>{{ $publication->category?->name ?? 'Sem categoria' }}</span>
-                        </div>
-                    </article>
-                @empty
-                    <p class="explore-empty">Nenhum projeto publicado ainda.</p>
-                @endforelse
+                @for ($i = 0; $i < 3; $i++)
+                    <a class="explore-project-card" href="#" aria-label="Abrir projeto em destaque {{ $i + 1 }}"></a>
+                @endfor
             </div>
 
             <div class="explore-ad" aria-label="Espaço de anúncio">
@@ -74,23 +80,9 @@
 
         <div class="explore-recent-layout">
             <div class="explore-project-grid explore-project-grid-recent" aria-label="Projetos recentes">
-                @forelse ($recentPublications as $publication)
-                    <article class="explore-project-card" data-category="{{ $publication->category?->name }}">
-                        <img
-                            class="explore-project-image"
-                            src="{{ str_starts_with($publication->image, 'images/')
-                                ? asset($publication->image)
-                                : asset('storage/' . ltrim($publication->image, '/')) }}"
-                            alt="Imagem do projeto {{ $publication->title }}"
-                        >
-                        <div class="explore-project-info">
-                            <strong>{{ $publication->title }}</strong>
-                            <span>{{ $publication->category?->name ?? 'Sem categoria' }}</span>
-                        </div>
-                    </article>
-                @empty
-                    <p class="explore-empty">Nenhum projeto publicado ainda.</p>
-                @endforelse
+                @for ($i = 0; $i < 4; $i++)
+                    <a class="explore-project-card" href="#" aria-label="Abrir projeto recente {{ $i + 1 }}"></a>
+                @endfor
             </div>
 
             <div class="explore-ad explore-ad-small" aria-label="Espaço de anúncio">

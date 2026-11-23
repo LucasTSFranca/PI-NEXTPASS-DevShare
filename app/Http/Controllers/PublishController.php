@@ -17,24 +17,7 @@ class PublishController extends Controller
             'image' => ['required', 'image', 'mimes:png,jpg,jpeg,webp', 'max:5120'],
         ]);
 
-        $imageDirectory = public_path('images/publications');
-
-        if (!is_dir($imageDirectory) && !mkdir($imageDirectory, 0755, true) && !is_dir($imageDirectory)) {
-            throw new \RuntimeException(
-                'Não foi possível criar a pasta das imagens das publicações.'
-            );
-        }
-
-        $imageFileName = Str::uuid() . '.' . $request->file('image')->extension();
-        $imageSaved = $request->file('image')->move($imageDirectory, $imageFileName);
-
-        if (!$imageSaved) {
-            throw new \RuntimeException(
-                'Não foi possível salvar a imagem da publicação.'
-            );
-        }
-
-        $imagePath = 'images/publications/' . $imageFileName;
+        $imagePath = $request->file('image')->store('publications', 'public');
 
         Publication::create([
             'user_id' => $request->user()->id,
