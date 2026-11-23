@@ -932,6 +932,12 @@ body{
     color: #fff;
 }
 
+.profile-primary-button{
+    width: fit-content;
+    margin-top: 0.15rem;
+    cursor: pointer;
+}
+
 .profile-stats{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1025,7 +1031,11 @@ body{
     text-decoration: none;
     text-align: left;
     transition: background-color 0.2s ease, border-color 0.2s ease;
-    cursor: default;
+    cursor: pointer;
+}
+
+.profile-menu-form{
+    margin: 0;
 }
 
 .profile-menu-link i{
