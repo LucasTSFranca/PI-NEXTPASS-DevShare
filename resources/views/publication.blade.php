@@ -1,4 +1,4 @@
-@extends('layouts.app_alt')
+@extends('layouts.app')
 
 @section('title', 'Postar projeto - DevShare')
 @section('body-class', 'publication-page')

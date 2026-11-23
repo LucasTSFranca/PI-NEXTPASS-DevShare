@@ -1,4 +1,4 @@
-@extends('layouts.app_alt')
+@extends('layouts.app')
 @section('title', 'DevShare - Home')
 @section('btn-sessao')
   <form action="{{ route('logout') }}" method="POST">
