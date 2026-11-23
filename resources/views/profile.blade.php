@@ -132,6 +132,8 @@
 
     </section>
 
+    </section>
+@section('profile-content')
     <div class="profile-layout">
 
         <nav class="profile-sidebar" aria-label="Navegação do perfil">
