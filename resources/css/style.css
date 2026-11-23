@@ -615,9 +615,46 @@ body{
 }
 
 .explore-project-card{
+    position: relative;
     display: block;
+    overflow: hidden;
     text-decoration: none;
     transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.explore-project-image{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.explore-project-info{
+    position: absolute;
+    inset: auto 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.75rem;
+    background: linear-gradient(transparent, rgba(2, 25, 43, 0.92));
+    color: #fff;
+}
+
+.explore-project-info strong{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.explore-project-info span{
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.78rem;
+}
+
+.explore-empty{
+    grid-column: 1 / -1;
+    margin: 0;
+    color: #d2e0e6;
 }
 
 .explore-project-card:hover,
@@ -932,12 +969,6 @@ body{
     color: #fff;
 }
 
-.profile-primary-button{
-    width: fit-content;
-    margin-top: 0.15rem;
-    cursor: pointer;
-}
-
 .profile-stats{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1031,11 +1062,7 @@ body{
     text-decoration: none;
     text-align: left;
     transition: background-color 0.2s ease, border-color 0.2s ease;
-    cursor: pointer;
-}
-
-.profile-menu-form{
-    margin: 0;
+    cursor: default;
 }
 
 .profile-menu-link i{

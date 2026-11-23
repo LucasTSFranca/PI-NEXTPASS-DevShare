@@ -1,4 +1,5 @@
 @extends('layouts.app')
+
 @section('title', 'DevShare - Cadastrar')
 
 @section('btn-sessao')

@@ -1,5 +1,5 @@
 
-@extends('layouts.app_alt')
+@extends('layouts.app')
 
 @section('title', 'Meu perfil - DevShare')
 @section('body-class', 'profile-page')
@@ -31,7 +31,7 @@
                             ? asset($user->avatar_photo)
                             : asset('storage/' . $user->avatar_photo)
                           ) . '?v=' . ($user->updated_at?->timestamp ?? time())
-                        : asset('images/user.png') }}"
+                        : asset('images/user2.png') }}"
                     alt="Foto de perfil de {{ $user->name }}"
                 >
 
@@ -131,37 +131,33 @@
         </div>
 
     </section>
-
-    </section>
 @section('profile-content')
     <div class="profile-layout">
 
         <nav class="profile-sidebar" aria-label="Navegação do perfil">
 
-            <a href="{{ route('home') }}" class="profile-menu-link">
+            <button type="button" class="profile-menu-link is-active">
                 <i class="bi bi-house-door-fill" aria-hidden="true"></i>
                 Início
-            </a>
+            </button>
 
-            <a href="#projetos" class="profile-menu-link">
+            <button type="button" class="profile-menu-link">
                 <i class="bi bi-folder2-open" aria-hidden="true"></i>
                 Projetos
-            </a>
+            </button>
 
-            <a href="{{ route('publish') }}" class="profile-menu-link">
-                <i class="bi bi-plus-circle-fill" aria-hidden="true"></i>
-                Publicar projeto
-            </a>
+            <button type="button" class="profile-menu-link">
+                <i class="bi bi-gear-fill" aria-hidden="true"></i>
+                Configurações
+            </button>
 
-            <form action="{{ route('logout') }}" method="POST" class="profile-menu-form">
-                @csrf
-                <button type="submit" class="profile-menu-link">
-                    <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
-                    Sair
-                </button>
-            </form>
+            <button type="button" class="profile-menu-link">
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
+                Sair
+            </button>
 
         </nav>
+@endsection
         <div class="profile-main-column">
 
             <section class="profile-panel" id="projetos" aria-labelledby="projects-title">
